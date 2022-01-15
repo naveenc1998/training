@@ -1,0 +1,37 @@
+package lab1;
+
+import java.util.Scanner;
+
+public class SumOfNatural {
+	int calculateSum(int n)
+	{
+		int sum=0;
+		if(n>=1)
+		{
+		   for(int i=n;i>0;i--)
+		    {
+			    if((i%3==0)||(i%5==0))
+			    {
+				   sum=sum+i;	
+			    }	
+		    }
+		}
+		else
+		{
+			System.out.println("Given number is not a natural number");
+		}
+		return sum;
+	}
+	
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the natural number");
+		int n=sc.nextInt();
+		SumOfNatural sn=new SumOfNatural();
+		System.out.print("The sum of first "+n+" natural numbers is :");
+		System.out.print( sn.calculateSum(n));		
+		
+	}
+
+}
