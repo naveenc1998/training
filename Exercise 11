@@ -1,0 +1,35 @@
+package lab1;
+
+import java.util.Scanner;
+
+public class IncreasingNumber {
+         boolean checkNumber(int n)
+         {
+        	 String s=Integer.toString(n);
+        	 char c;
+        	 int v=0;
+        	 for (int i=0 ; i<s.length()-1 ; i++)
+        	 {
+        		 c=s.charAt(i);
+        		 if(c>s.charAt(i+1)) 
+        		 {
+        			v=1;
+        			break;
+        		 }
+        	 }
+        	 if(v==1)
+        		 return false;
+        	 else 
+        		 return true;
+         }
+         
+         public static void main(String[] args)
+         {
+        	 Scanner sc=new Scanner(System.in);
+        	 System.out.println("Enter the number to be checked");
+        	 int n=sc.nextInt();
+        	 IncreasingNumber in=new IncreasingNumber();
+        	 System.out.println(in.checkNumber(n));
+        	 System.out.println();
+         }
+}
