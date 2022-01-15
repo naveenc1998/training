@@ -1,0 +1,39 @@
+package lab1;
+
+import java.util.Scanner;
+
+public class SumOfSquareDiff {
+  int calculateDifference(int n)
+  {
+	   int sum=0;
+	   int sos=0 , ss=0;
+	if(n>=1)
+	{
+	for(int i=1;i<=n;i++)
+	{
+		sos=sos+(i*i);
+	}
+	for(int j=1;j<=n;j++)
+	{
+		ss=ss+j;
+	}
+	ss=ss*ss;
+    sum=sos-ss;
+	}
+	else
+	{
+		System.out.println("Given number is not a natural number");
+	}
+	return sum;
+  }
+	 
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the natural number ");
+		int n=sc.nextInt();
+		System.out.print("The Difference is: ");
+		SumOfSquareDiff ssd=new SumOfSquareDiff();
+		System.out.println(ssd.calculateDifference(n));
+	}
+}
