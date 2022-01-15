@@ -1,0 +1,24 @@
+package lab1;
+import java.util.ArrayList; class Main{ public static void main(String argss[]){ Main obj1=new Main(); obj1.mySplit("chennu,naveen,varma",",");
+
+}
+public void mySplit(String stringToBeBroken,String delimiter){
+    ArrayList<String> arr=new ArrayList<String>();
+    String str=" ";
+    for(int i=0;i<stringToBeBroken.length();i++){
+        if(stringToBeBroken.charAt(i) != delimiter.charAt(0)){
+           
+             str=str +stringToBeBroken.charAt(i);
+             
+        }
+        if(stringToBeBroken.charAt(i)==delimiter.charAt(0)||i==stringToBeBroken.length()-1){
+            arr.add(str);
+            
+            str="";
+            
+        }
+    }
+    System.out.println(arr);
+
+}
+}
