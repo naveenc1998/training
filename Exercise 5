@@ -1,0 +1,25 @@
+package lab1;
+
+import java.util.Scanner;
+
+public class SumOfCubes {
+ void sumOfCubes(int n) {
+	 int total = 0;
+	 while(n>0)
+	 {
+		 int res = n%10;
+		 total = total +(res*res*res);
+		 n=n/10;
+		 
+	 }
+	 System.out.println("sum of the cubes  "+ total);
+ }
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter a number");
+		int a = input.nextInt();
+		SumOfCubes sc = new SumOfCubes();
+	    sc.sumOfCubes(a);
+	}
+
+}
